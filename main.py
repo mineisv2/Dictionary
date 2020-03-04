@@ -17,15 +17,14 @@ def finder(word):
     except KeyError:
         defintion = defintion["Verb"]
     defintion = (defintion[0])
-    print(defintion)
+    print(defintion, "\n")
 
-    final.write(word)
+    defintion = defintion + "\n"
+
     final.write(defintion)
 
-print(words[1])
-
-
-for i in len(words):
-    finder([words[i]])
+for i in range(len(words)):
+    final.write(words[i])
+    finder(words[i])
 
 file.close()
